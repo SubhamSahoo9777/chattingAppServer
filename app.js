@@ -26,6 +26,7 @@ app.use(express.json());
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/chat', chatRoutes);
+app.use('/', (req,res)=>res.send("server running successfully"));
 
 // Socket.io implementation
 socketEvents(io);
